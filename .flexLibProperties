@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flexLibProperties includeAllClasses="true" version="3">
-  <includeClasses/>
+  <includeClasses>
+    <classEntry path="com.hailToTheMayor.BaseDelegate"/>
+    <classEntry path="com.hailToTheMayor.Venue"/>
+    <classEntry path="com.FoursquareResultEvent"/>
+    <classEntry path="com.hailToTheMayor.User"/>
+  </includeClasses>
   <includeResources/>
   <namespaceManifests/>
 </flexLibProperties>
