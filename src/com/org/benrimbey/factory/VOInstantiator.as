@@ -1,6 +1,5 @@
 package com.org.benrimbey.factory {
 	import com.adobe.serialization.json.JSON;
-	import com.hailToTheMayor.models.Category;
 	
 	import flash.utils.describeType;
 	import flash.utils.getDefinitionByName;
@@ -36,7 +35,6 @@ package com.org.benrimbey.factory {
 					} else if (obj[property.@name] is (propertyTypeClass)) {
 						returnObject[property.@name] = obj[property.@name];
 					} else {
-						trace ("setting chisd to " + propertyTypeClass);
 						returnObject[property.@name] = VOInstantiator.mapToFlexObjects(obj[property.@name], propertyTypeClass);
 					}
 				}
