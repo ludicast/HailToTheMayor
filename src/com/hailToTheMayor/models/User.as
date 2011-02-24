@@ -6,6 +6,7 @@ package com.hailToTheMayor.models
 		public var firstName:String;
 		public var lastName:String;
 		public var photo:String;
+		public var gender:String;
 		public var homeCity:String;
 	}
 }
