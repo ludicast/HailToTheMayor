@@ -2,6 +2,7 @@
 <flexLibProperties includeAllClasses="true" version="3">
   <includeClasses>
     <classEntry path="com.org.benrimbey.factory.VOInstantiator"/>
+    <classEntry path="com.hailToTheMayor.models.Checkin"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

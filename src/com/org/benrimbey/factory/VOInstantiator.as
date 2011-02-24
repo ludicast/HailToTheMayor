@@ -18,13 +18,10 @@ package com.org.benrimbey.factory {
 			for each (var varList:XMLList in [propertyMap.variable, propertyMap.accessor]) {
 			
 			for each (var property:XML in varList) {	
-				//trace ("looking at prop " + property.@name);
 				if ((obj as Object).hasOwnProperty(property.@name)) {
-				//	trace ("checking out name : " + property.@name);
 					propertyTypeClass = getDefinitionByName(property.@type) as Class;
 					if (
-						obj[property.@name] is Array 
-						//&& propertyTypeClass is Vector		
+						obj[property.@name] is Array 		
 					) {
 						var array:Array = obj[property.@name] as Array;
 						var split:Array = String(property.@type).split("Vector.");
@@ -36,10 +33,11 @@ package com.org.benrimbey.factory {
 								mapToFlexObjects(item,innerClass)
 							);
 						} 
-						//trace("created ...  " + returnObject[property.@name]);
-						
 					} else if (obj[property.@name] is (propertyTypeClass)) {
 						returnObject[property.@name] = obj[property.@name];
+					} else {
+						trace ("setting chisd to " + propertyTypeClass);
+						returnObject[property.@name] = VOInstantiator.mapToFlexObjects(obj[property.@name], propertyTypeClass);
 					}
 				}
 			}
